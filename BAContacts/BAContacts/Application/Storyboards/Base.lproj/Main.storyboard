@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Employee List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="EmployeeListViewController" id="BYZ-38-t0r" customClass="EmployeeListViewController" customModule="BAContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gbQ-pu-Y7Z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gbQ-pu-Y7Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CUs-bP-Rb3"/>
+                            <constraint firstAttribute="bottom" secondItem="gbQ-pu-Y7Z" secondAttribute="bottom" id="V20-di-Tp1"/>
+                            <constraint firstItem="gbQ-pu-Y7Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aX6-Vq-d5V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gbQ-pu-Y7Z" secondAttribute="trailing" id="gzD-m4-sna"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="gbQ-pu-Y7Z" id="tKr-qh-Xhl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="18.75"/>
+        </scene>
+        <!--Employee Detail View Controller-->
+        <scene sceneID="eSy-wE-adp">
+            <objects>
+                <viewController storyboardIdentifier="EmployeeDetailViewController" id="NjY-gy-O7B" customClass="EmployeeDetailViewController" customModule="BAContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nGC-Ie-1eT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G0w-Ge-8RY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="738"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6D-V2-MSh">
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCX-va-CUp">
+                                        <rect key="frame" x="16" y="16" width="382" height="48"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Open in Contacts">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goToContactsAction:" destination="NjY-gy-O7B" eventType="touchUpInside" id="GZq-M5-VwD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="QCX-va-CUp" firstAttribute="top" secondItem="t6D-V2-MSh" secondAttribute="top" constant="16" id="5o7-j5-gQD"/>
+                                    <constraint firstAttribute="height" constant="80" id="RF1-7M-BUR"/>
+                                    <constraint firstAttribute="trailing" secondItem="QCX-va-CUp" secondAttribute="trailing" constant="16" id="cJR-Y1-O6O"/>
+                                    <constraint firstAttribute="bottom" secondItem="QCX-va-CUp" secondAttribute="bottom" constant="16" id="deQ-bo-jq0"/>
+                                    <constraint firstItem="QCX-va-CUp" firstAttribute="leading" secondItem="t6D-V2-MSh" secondAttribute="leading" constant="16" id="wBl-JO-NFd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AAP-xM-gwH" firstAttribute="trailing" secondItem="G0w-Ge-8RY" secondAttribute="trailing" id="8Yo-3E-ikz"/>
+                            <constraint firstItem="G0w-Ge-8RY" firstAttribute="top" secondItem="AAP-xM-gwH" secondAttribute="top" id="Kcj-F7-t1F"/>
+                            <constraint firstItem="t6D-V2-MSh" firstAttribute="trailing" secondItem="AAP-xM-gwH" secondAttribute="trailing" id="Vln-QJ-bKU"/>
+                            <constraint firstItem="t6D-V2-MSh" firstAttribute="top" secondItem="G0w-Ge-8RY" secondAttribute="bottom" id="at2-uj-b11"/>
+                            <constraint firstItem="t6D-V2-MSh" firstAttribute="leading" secondItem="AAP-xM-gwH" secondAttribute="leading" id="cP1-si-PQ6"/>
+                            <constraint firstItem="G0w-Ge-8RY" firstAttribute="leading" secondItem="AAP-xM-gwH" secondAttribute="leading" id="dbV-m9-umo"/>
+                            <constraint firstItem="AAP-xM-gwH" firstAttribute="bottom" secondItem="t6D-V2-MSh" secondAttribute="bottom" id="uU2-cd-eIL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AAP-xM-gwH"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomViewHeightConstraint" destination="RF1-7M-BUR" id="b5R-nK-1As"/>
+                        <outlet property="tableView" destination="G0w-Ge-8RY" id="Jpq-gi-W06"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulE-g6-rMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785.50724637681162" y="18.75"/>
+        </scene>
+    </scenes>
+</document>
